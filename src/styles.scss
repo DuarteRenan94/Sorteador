@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+  font-family: 'Inter', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+$primary-bg: rgb(4, 131, 216);
+$danger-bg: #b91c1c;
+$secondary-bg: #6c757d;
+@mixin btn-settings{
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: #fff;
+}
+
+.primary{
+  background-color: $primary-bg;
+  @include btn-settings();
+  &:hover{
+    background-color: lighten($primary-bg, 20);
+  }
+}
+
+.danger{
+  background-color: $danger-bg;
+    @include btn-settings();
+    &:hover {
+      background-color: lighten($danger-bg, 20);
+    }
+}
+
+.secondary{
+  background-color: $secondary-bg;
+  @include btn-settings();
+  &:hover {
+    background-color: lighten($secondary-bg, 20);
+  }
+}
+
+.close-icon{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
